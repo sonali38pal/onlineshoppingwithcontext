@@ -3,7 +3,7 @@ import "../sign-up-form/sign-up-form.styles.scss";
 import { UserContext } from "../../context/context.component";
 import { signInWithGooglePopup, createUserDocumentFromAuth, signInAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
 
 const defaultFormField = {
@@ -75,7 +75,7 @@ function SignIn() {
 
                 <div className="buttons-container ">
                 <Button type="submit">Sign In</Button>
-                <Button type="submit" onClick={logGoogleUser} buttonType="google">Google Sign In</Button>
+                <Button type="submit" onClick={logGoogleUser} buttonType={BUTTON_TYPE_CLASSES.google}>Google Sign In</Button>
                 </div>
 
             </form>
